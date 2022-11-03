@@ -29,5 +29,22 @@ and t2.song_id = h.song_id
 ORDER BY song_plays DESC
 
 
+/*
+        other Sol : 
+*/
 
+ 
+
+
+
+Select user_id,song_id,SUM(song_plays) as song_count FROM
+(
+SELECT user_id,song_id,song_plays FROM songs_history
+UNION ALL
+SELECT user_id,song_id,COUNT(song_id) as song_plays FROM songs_weekly
+where DATE(listen_time) <= '08/04/2022'
+group by user_id,song_id
+) as sng
+GROUP BY user_id,song_id
+order by SUM(song_plays) DESC
 
