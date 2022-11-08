@@ -1,6 +1,6 @@
 /*
 
-  Link   : https://datalemur.com/questions/amazon-shopping-spree
+  Link   : https://datalemur.com/questions/photoshop-revenue-analysis
   author : Mohamed Ibrahim
 
 
