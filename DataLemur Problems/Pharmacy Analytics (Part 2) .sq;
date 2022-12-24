@@ -1,0 +1,16 @@
+/*
+
+  Link   : https://datalemur.com/questions/non-profitable-drugs
+  author : Mohamed Ibrahim
+
+*/
+
+
+SELECT manufacturer ,COUNT(*), - 1 * SUM(total_sales - cogs) as total_loss 
+FROM pharmacy_sales
+WHERE total_sales - cogs  <= 0
+GROUP BY manufacturer
+ORDER BY total_loss DESC;
+
+
+
