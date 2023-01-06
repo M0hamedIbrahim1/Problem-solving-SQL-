@@ -12,3 +12,13 @@ FROM winemag_p1
 where lower(description) REGEXP '(plum|rose|cherry|hazelnut)([^a-z])'
 
 
+other sol : 
+
+
+SELECT distinct winery
+FROM winemag_p1
+WHERE LOWER(description) REGEXP '\\b(plum|cherry|rose|hazelnut)\\b'
+ 
+ 
+
+ 
